@@ -6,13 +6,14 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:38:23 by lramela           #+#    #+#             */
-/*   Updated: 2019/05/25 12:45:41 by lramela          ###   ########.fr       */
+/*   Updated: 2019/05/30 09:16:59 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
+# include <stdlib.h>
 # include <string.h>
 
 int		ft_islower(int c);
@@ -24,11 +25,16 @@ int		ft_isascii(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isprint(int c);
-
+int     ft_strcmp(const char *s1, const char *s2);
+int     ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlen(char *s);
+char        *ft_strchr(const char *s, int c);
+char		*ft_strrchr(const char *s, int c);
 char		*ft_strcpy(char *dst, const char *src);
 char 		*ft_strncpy(char *dst, const char* src, size_t len);
 char    	*ft_strdup(const char *s);
-
+char		*ft_strcat(char *s1, const char *s2);
+char        *ft_strncat(char *s1, const char *s2 , size_t n);
 void		*ft_memset(void *b, int c, size_t len);
 #endif
