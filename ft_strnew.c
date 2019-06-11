@@ -6,16 +6,13 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 09:41:40 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/10 12:30:32 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/11 15:20:10 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include "libft.h"
 
 char	*ft_strnew(size_t size)
 {
-	size_t i;
-
-	i = 0;
+	return ((char *)ft_memalloc(size + 1));
 }
-*/
