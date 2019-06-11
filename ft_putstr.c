@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 13:05:52 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/07 13:28:04 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/10 14:10:15 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ void	ft_putstr(char const *s)
 	int i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		ft_putchar(s[i]);
 		i++;
 	}
-	return (0);
 }

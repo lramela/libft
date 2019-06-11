@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 12:07:36 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/05 12:25:25 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/11 13:11:04 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 int		main(void)
 {
+/*	ft_putnbr(6);*/
 /*	char src[] = "Wethinkcode";
 	char dest[100];*/
 
@@ -29,7 +30,7 @@ int		main(void)
 /*	printf("ft_memcmp -> %d\n", memcmp("lesego", "lesego", 6));*/
 /*	ft_memcpy(dest, src, ft_strlen(src) + 1);
 	printf("ft_memcpy -> %s\n", dest);*/
-	printf("");
+	printf("ft_bzero -> ");
 	return (0);
 	
 }

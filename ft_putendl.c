@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 10:46:26 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/10 14:37:17 by lramela          ###   ########.fr       */
+/*   Created: 2019/06/07 10:34:23 by lramela           #+#    #+#             */
+/*   Updated: 2019/06/10 12:29:37 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalnum(int c)
+void	ft_putendl(char const *s)
 {
-	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
-		return (1);
-	return (0);
+	ft_putstr(s);
+	ft_putchar('\n');
 }
