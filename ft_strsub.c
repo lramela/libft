@@ -1,0 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/11 14:54:54 by lramela           #+#    #+#             */
+/*   Updated: 2019/06/11 15:40:09 by lramela          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
+{
+	char	*str;
+	int		i;
+
+	i = 0;
+	str = ft_strnew(len + 1);
+	len = len + start;
+	if (!str)
+		return (NULL);
+	if (start < ft_strlen(s))
+	{
+		while (s[start] != '\0' && start < len)
+		{
+			str[i] = s[start];
+			start++;
+			i++;
+		}
+	}
+	str[i] = '\0';
+	return (str);
+}
