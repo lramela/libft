@@ -15,6 +15,8 @@
 
 int		main(void)
 {
+	char	*str;
+	char	*ptr;
 /*	ft_putnbr(6);*/
 /*	char src[] = "Wethinkcode";
 	char dest[100];*/
@@ -30,7 +32,10 @@ int		main(void)
 /*	printf("ft_memcmp -> %d\n", memcmp("lesego", "lesego", 6));*/
 /*	ft_memcpy(dest, src, ft_strlen(src) + 1);
 	printf("ft_memcpy -> %s\n", dest);*/
-	printf("ft_bzero -> ");
+	str = ft_strnew(10);
+	ft_strcpy(str, "    Hello!!!    ");
+	printf("%s\n", str);
+	ptr = ft_strtrim(str);
+	printf("%s\n", ptr);
 	return (0);
-	
 }

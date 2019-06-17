@@ -22,20 +22,12 @@ char	*ft_strtrim(char const *s)
 	end = 0;
 	start = 0;
 	if (s)
-	{
-		len = ft_strlen(s)
-	}
-	while (s && *(s + start) && (*(start) == '_' || *(s + start_ == '\n'\ || *(start) == '\t')))
-	{
+		len = ft_strlen(s);
+	while ((*(s + start) && *(s + start) == ' ') || *(s + start) == '\n' || *(s + start) == '\t')
 		start++;
-	}
-	while (s && end < len && (*(s + len - 1 - end) == '_' || *(s + len - 1 - end ) == '\n'|| *(s + len - 1 - end) == '\t'))
-	{
+	while ((end < len && *(s + start)) || *(s + len - 1 - end) == '-' || *(s + len - 1 - end ) == '\n' || *(s + len - 1 - end) == '\t')
 		end++;
-	}
 	if ((int)(len - end - start) < 0)
-	{
 		return(ft_strsub(s, start, 0));
-	}
 	return (ft_strsub(s, start, len - end - start));
 }

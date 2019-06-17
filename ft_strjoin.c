@@ -14,8 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int size;
-	int i;
+	int 	size;
+	int 	i;
+	char	*str;
 
 	i = 0;
 	size = ft_strlen(s1) + ft_strlen(s2) + 1;
@@ -25,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (*s1 && i < size)
 	{
 		str[i] = *s1;
-		s++;
+		s1++;
 		i++;
 	}
 	while (*s2 && i < size )
@@ -37,4 +38,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-

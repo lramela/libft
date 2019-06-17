@@ -42,6 +42,9 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char    *ft_strdup(const char *s);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2 , size_t n);
+char	*ft_strnew(size_t size);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s);
 void	ft_putnbr(int c);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
@@ -53,5 +56,6 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memalloc(size_t size);
+void	ft_bzero(void *s, size_t n);
 #endif
-
