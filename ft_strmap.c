@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 10:01:57 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/17 10:10:11 by lramela          ###   ########.fr       */
+/*   Created: 2019/06/17 10:11:31 by lramela           #+#    #+#             */
+/*   Updated: 2019/06/17 10:45:54 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	unsigned int index;
+	size_t	index;
+	char	*str;
 
-	index  = 0;
+	index = 0;
 	if (!s)
-		return ;
-	while (s[index] != '\0')
+		return (NULL);
+	str = (char *)malloc(sizeof(char) *ft_strlen(s) + 1);
+	if (!str)
+		return (NULL);
+	while (index < ft_strlen(s))
 	{
-		s[index] = '\0';
+		str[index] = f(s[index]);
 		index++;
 	}
+	str[index] = '\0';
+	return (str);
 }
