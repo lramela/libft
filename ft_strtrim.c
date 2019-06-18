@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 07:31:07 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/12 09:05:00 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/17 15:36:04 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,29 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t len;
-	size_t end;
-	size_t start;
+	size_t 	i;
+	size_t 	end;
+	size_t 	start;
+	size_t 	len;
+	char	*str;
 
-	len = 0;
-	end = 0;
+	i = 0;
+	len = ft_strlen(s);
 	start = 0;
-	if (s)
-		len = ft_strlen(s);
-	while ((*(s + start) && *(s + start) == ' ') || *(s + start) == '\n' || *(s + start) == '\t')
+	end = 1;
+	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
 		start++;
-	while ((end < len && *(s + start)) || *(s + len - 1 - end) == '-' || *(s + len - 1 - end ) == '\n' || *(s + len - 1 - end) == '\t')
+	while (s[len - end] == ' ' || s[len - end] == '\n' || s[len - end] == '\n')
 		end++;
-	if ((int)(len - end - start) < 0)
-		return(ft_strsub(s, start, 0));
-	return (ft_strsub(s, start, len - end - start));
+	len = len - end - start + 1;
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	while (i < len)
+	{
+		str[i] = (char)s[start + i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
