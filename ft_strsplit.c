@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 12:57:23 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/17 13:39:18 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/18 11:43:54 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static	int	ft_nbwords(char const *s, char c)
 	return (words);
 }
 
-static	void	ft_split(char **tab,char const *str,char delimiter)
+static	void	ft_split(char **tab, char const *str, char delimiter)
 {
 	int		i;
 	int		words;
