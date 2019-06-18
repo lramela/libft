@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 10:01:57 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/17 10:10:11 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/18 08:44:19 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_strclr(char *s)
 {
 	unsigned int index;
 
-	index  = 0;
+	index = 0;
 	if (!s)
 		return ;
 	while (s[index] != '\0')

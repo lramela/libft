@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 13:56:42 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/11 13:11:43 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/18 08:40:20 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		source = (char*)src + len - 1;
 		dest = (char*)dst + len - 1;
-		while (len -- > 0)
+		while (len-- > 0)
 		{
 			*(dest--) = *(source--);
 		}
