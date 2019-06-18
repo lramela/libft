@@ -6,26 +6,25 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 07:31:07 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/18 14:21:31 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/18 14:50:23 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
-    size_t    start;
-    size_t    len;
-    
-    start = 0;
-    if (!s)
-        return (NULL);
-    while ((s[start] == ' ' || s[start] == '\n' || s[start] == '\t'))
-        start++;
-    if (s[start] == '\0')
-        return (ft_strdup(s + start));
-    len = ft_strlen(s) - 1;
-    while ((s[len] == ' ' || s[len] == '\t' || s[len] == '\n') && len > 0)
-        len--;
-    return (ft_strsub(s, start, len - start + 1));
+	size_t	start;
+	size_t	len;
+	start = 0;
+	if (!s)
+		return (NULL);
+	while ((s[start] == ' ' || s[start] == '\n' || s[start] == '\t'))
+		start++;
+	if (s[start] == '\0')
+		return (ft_strdup(s + start));
+	len = ft_strlen(s) - 1;
+	while ((s[len] == ' ' || s[len] == '\t' || s[len] == '\n') && len > 0)
+		len--;
+	return (ft_strsub(s, start, len - start + 1));
 }

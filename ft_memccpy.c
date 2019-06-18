@@ -6,17 +6,16 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 14:10:04 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/18 12:05:35 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/18 14:37:02 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-    char *ptr_dst;
+	char	*ptr_dst;
     ptr_dst = dst;
-
 	while (n > 0)
 	{
 		if (*(unsigned char*)src != (unsigned char)c)
