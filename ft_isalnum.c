@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 10:46:26 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/10 14:37:17 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/20 12:02:26 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@ int		ft_isalnum(int c)
 {
 	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
 		return (1);
-	return (0);
+	else
+		return (0);
 }

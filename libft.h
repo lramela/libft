@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:38:23 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/18 14:52:43 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/20 11:35:53 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int		ft_strequ(char const *s1, char const *s2);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
+char	*ft_itoa(int c);
+char	**ft_strsplit(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strcpy(char *dst, const char *src);
