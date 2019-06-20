@@ -6,13 +6,13 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 12:57:23 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/18 11:43:54 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/20 10:44:50 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	ft_nbwords(char const *s, char c)
+static	int		ft_nbwords(char const *s, char c)
 {
 	int		i;
 	int		words;
@@ -46,8 +46,8 @@ static	void	ft_split(char **tab, char const *str, char delimiter)
 	{
 		while (str && *(str + counter) == delimiter)
 			counter++;
-		while (str && *(str + counter + len) && *(str + counter + len)!= delimiter)
-				len++;
+		while (str && *(str + counter + len) && *(str + counter + len) != delimiter)
+			len++;
 		tab[i] = ft_strsub(str, counter, len);
 		counter += len;
 		len = 0;
@@ -56,13 +56,13 @@ static	void	ft_split(char **tab, char const *str, char delimiter)
 	tab[i] = NULL;
 }
 
-char		**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char		**tab;
 
 	tab = NULL;
-		if (!s)
-			return (tab);
+	if (!s)
+		return (tab);
 	tab = (char **)malloc(sizeof(char *) * (ft_nbwords((char *)s, c) + 1));
 	if (!tab)
 		return (NULL);

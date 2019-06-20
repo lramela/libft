@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 11:14:57 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/18 12:09:35 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/20 10:40:16 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ char		*ft_strncpy(char *dst, const char *src, size_t len)
 	}
 	while (i < len)
 	{
-        dst[i] = '\0';
-        i++;
+		dst[i] = '\0';
+		i++;
 	}
 	return (dst);
 }
