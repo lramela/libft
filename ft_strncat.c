@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:33:56 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/18 12:14:35 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/20 10:33:32 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char		*ft_strncat(char *s1, const char *s2, size_t n)
 {
-    int     i;
-    size_t  k;
+	int		i;
+	size_t	k;
 
 	i = 0;
 	k = 0;
