@@ -6,7 +6,7 @@
 #    By: lramela <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 14:29:03 by lramela           #+#    #+#              #
-#    Updated: 2019/06/20 12:11:51 by lramela          ###   ########.fr        #
+#    Updated: 2019/06/21 13:59:26 by lramela          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,74 +71,21 @@ SOURCES = ft_tolower.c\
 		  ft_strtrim.c\
 		  ft_toupper.c\
 
-OBJECTS = ft_atoi.o\
-		  ft_bzero.o\
-		  ft_isalnum.o\
-		  ft_isalpha.o\
-		  ft_isascii.o\
-		  ft_itoa.o\
-		  ft_isdigit.o\
-		  ft_islower.o\
-		  ft_isprint.o\
-		  ft_isupper.o\
-		  ft_isalpha.o\
-		  ft_memalloc.o\
-		  ft_memccpy.o\
-		  ft_memchr.o\
-		  ft_memcmp.o\
-		  ft_memcpy.o\
-		  ft_memdel.o\
-		  ft_memmove.o\
-		  ft_memset.o\
-		  ft_putchar.o\
-		  ft_putchar_fd.o\
-		  ft_putendl.o\
-		  ft_putendl_fd.o\
-		  ft_putnbr.o\
-		  ft_putnbr_fd.o\
-		  ft_putstr.o\
-		  ft_putstr_fd.o\
-		  ft_strcat.o\
-		  ft_strchr.o\
-		  ft_strsplit.o\
-		  ft_strclr.o\
-		  ft_strcmp.o\
-		  ft_strcpy.o\
-		  ft_strdel.o\
-		  ft_strdup.o\
-		  ft_strequ.o\
-		  ft_striter.o\
-		  ft_striteri.o\
-		  ft_strjoin.o\
-		  ft_strlcat.o\
-		  ft_strlen.o\
-		  ft_strmap.o\
-		  ft_strmapi.o\
-		  ft_strncat.o\
-		  ft_strncmp.o\
-		  ft_strncpy.o\
-		  ft_strnequ.o\
-		  ft_strnew.o\
-		  ft_strequ.o\
-		  ft_strnstr.o\
-		  ft_strrchr.o\
-		  ft_strstr.o\
-		  ft_strsub.o\
-		  ft_strtrim.o\
-		  ft_tolower.o\
-		  ft_toupper.o\
+OBJECTS = $(SOURCES:%.c=%.o)
 
 all: $(NAME)
 
-$(NAME):
-	$(CC) $(CFLAGS) -c $(SOURCES)
+$(NAME): $(OBJECTS)
 	ar -rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
+$(OBJECTS):
+	$(CC) $(CFLAGS) -c $(SOURCES)
+
 clean:
-	rm -f $(OBJECTS)
+	rm -rf $(OBJECTS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(NAME)
 
-re: $(NAME)
+re: fclean all

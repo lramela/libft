@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 12:57:23 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/20 11:41:03 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/21 10:52:57 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ static	void	ft_split(char **tab, char const *str, char delimiter)
 	{
 		while (str && *(str + counter) == delimiter)
 			counter++;
-		while (str && *(str + counter + len) && *(str + counter + len) != delimiter)
+		while (str && *(str + counter + len) &&\
+			*(str + counter + len) != delimiter)
 			len++;
 		tab[i] = ft_strsub(str, counter, len);
 		counter += len;

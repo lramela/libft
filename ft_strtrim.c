@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 07:31:07 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/20 10:54:14 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/21 10:48:47 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_strtrim(char const *s)
 {
 	size_t	start;
 	size_t	len;
+
 	start = 0;
 	if (!s)
 		return (NULL);

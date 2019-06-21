@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/20 12:02:42 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/20 12:21:53 by lramela          ###   ########.fr       */
+/*   Created: 2019/06/21 10:56:08 by lramela           #+#    #+#             */
+/*   Updated: 2019/06/21 15:52:52 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 static	int		ft_int_len(int n)
 {
 	int len;
-	
+
 	len = 0;
 	if (n == 0)
 		len++;
 	if (n < 0)
-    {
-		n *= -1;
+	{
+		n = n * -1;
 		len++;
-    }
+	}
 	while (n)
 	{
 		n /= 10;
@@ -32,30 +32,30 @@ static	int		ft_int_len(int n)
 	return (len);
 }
 
-char            *ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-	int		len;
+	int		size;
 	char	*str;
-	
-	len = ft_int_len(n);
-	str = (char *)malloc(sizeof(char)* len + 1);
+
+	size = ft_int_len(n);
+	str = (char *)malloc(sizeof(char) * size + 1);
 	if (!str)
 		return (NULL);
 	if (n == -2147483648)
 		ft_strcpy(str, "-2147483648");
-	str[len] = '\0';
+	str[size] = '\0';
 	if (n == 0)
 		str[0] = '0';
 	if (n < 0)
-    {
+	{
 		str[0] = '-';
 		n *= -1;
 	}
 	while (n > 0)
-    {
-		str[len - 1] = '0' + (n % 10);
-		n = n / 10;
-		len--;
-    }
+	{
+		str[size - 1] = '0' + (n % 10);
+		n /= 10;
+		size--;
+	}
 	return (str);
 }
