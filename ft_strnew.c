@@ -6,7 +6,7 @@
 /*   By: lramela <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 09:41:40 by lramela           #+#    #+#             */
-/*   Updated: 2019/06/11 15:20:10 by lramela          ###   ########.fr       */
+/*   Updated: 2019/06/27 12:59:57 by lramela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	if (!size)
-		return (NULL);
 	return ((char *)ft_memalloc(size + 1));
 }
